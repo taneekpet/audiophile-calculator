@@ -44,11 +44,11 @@ function Fill() {
 
     const newTh1 = document.createElement('th');
     newTh1.scope = 'row';
-    newTh1.innerHTML = (1-lucky[i])*100;
+    newTh1.innerHTML = new Decimal(1).minus(lucky[i]).mul(new Decimal(100)).toFixed(20);
 
     const newTh2 = document.createElement('th');
     newTh2.scope = 'row';
-    newTh2.innerHTML = unlucky[i]*100;
+    newTh2.innerHTML = unlucky[i].mul(new Decimal(100)).toFixed(20);
 
     if(i == maxIndex){
       newTr.style.color = 'green'
