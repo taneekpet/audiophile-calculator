@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title>
+    ไว้หาเงื่อนไขที่แฟร์
+  </title>
+  <head>
+    <meta charset="utf-8"> 
+    <!-- Bootstrap related -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <!-- main script -->
+    <script src="assets/js/ui.js"></script>
+    <script src="assets/js/calculation.js"></script>
+  </head>
+  <body>
+
+    <div class="insertNewElement form-inline" style="width: 90%; margin: 10px 0 0 5%">
+      <label style="padding-right: 15px">โอกาสที่หูเทพจะทายถูก:</label>
+      <input type="number" class="form-control" id="correctChance" 
+        style="width: 30%; padding-left: 5px;"
+        onkeypress="return isNumberUI(event)"
+        placeholder="รายการค่าใช้จ่าย"
+        value=0.9
+      >
+      <label style="padding-right: 15px; margin-left: 15px">จำนวนครั้งที่จะทดลอง: </label>
+      <input type="number" class="form-control" id="numberOfTrial" 
+        style="width: 25%; padding-left: 5px; margin-left: 5px;"
+        onkeypress="return isNumberUI(event)"
+        placeholder="จำนวนครั้งที่จะทดลอง"
+        value=20
+      >
+      <button class="btn btn-primary" 
+        onclick="return Fill();"
+        style="margin-left: 15px;"
+      >คำนวณ</button>
+    </div>
+
+    <div class="tableInput form-inline" style="width: 90%; margin: 30px 0 0 5%">
+      <table class="table" id="mainTable">
+        <thead>
+          <tr id="labelTable">
+            <th scope="col">จำนวนครั้งที่ต้องถูกอย่างน้อย</th>
+            <th scope="col">โอกาสที่หูกากจะฟลุกถูก (%)</th>
+            <th scope="col">โอกาสที่หูเทพจะวืดทายไม่ถูก (%)</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+  </body>
+</html>
