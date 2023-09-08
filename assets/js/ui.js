@@ -51,7 +51,7 @@ function Fill() {
     newTh2.innerHTML = unlucky[i].mul(new Decimal(100)).toFixed(20);
 
     if(i == maxIndex){
-      newTr.style.color = 'green'
+      newTr.style.background = 'lightgreen'
     }
 
     newTr.appendChild(newTh0);
