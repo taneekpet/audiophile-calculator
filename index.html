@@ -18,18 +18,24 @@
   <body>
 
     <div class="insertNewElement form-inline" style="width: 90%; margin: 10px 0 0 5%">
-      <label style="padding-right: 15px">โอกาสที่หูเทพจะทายถูก:</label>
-      <input type="text" class="form-control" id="correctChance" 
-        style="width: 30%; padding-left: 5px;"
-        placeholder="โอกาสที่หูเทพจะทายถูก"
-        value=0.9
-      >
       <label style="padding-right: 15px; margin-left: 15px">จำนวนครั้งที่จะทดลอง: </label>
       <input type="number" class="form-control" id="numberOfTrial" 
-        style="width: 25%; padding-left: 5px; margin-left: 5px;"
+        style="width: 19%; padding-left: 5px; margin-left: 5px;"
         onkeypress="return isNumberUI(event)"
         placeholder="จำนวนครั้งที่จะทดลอง"
         value=20
+      >
+      <label style="padding-right: 15px; margin-left: 15px">โอกาสที่หูเทพจะทายถูก:</label>
+      <input type="text" class="form-control" id="correctChance" 
+        style="width: 19%; padding-left: 5px;"
+        placeholder="โอกาสที่หูเทพจะทายถูก"
+        value=0.9
+      >
+      <label style="padding-right: 5px; margin-left: 35px">โอกาสที่หูกากจะทายถูก:</label>
+      <input type="text" class="form-control" id="randomChance" 
+        style="width: 15%; padding-left: 5px;"
+        placeholder="โอกาสที่หูกากจะทายถูก"
+        value=0.5
       >
       <button class="btn btn-primary" 
         onclick="return Fill();"

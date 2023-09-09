@@ -27,11 +27,11 @@ function chanceCalculate(chance, N) {
   return result
 }
 
-function calculate(chance, N) {
+function calculate(chance, random, N) {
   let leastDif = new Decimal(Infinity)
   let leastDifIndex = -1
 
-  let lucky = chanceCalculate(0.5, N)
+  let lucky = chanceCalculate(random, N)
   let unlucky = chanceCalculate(chance, N)
 
   for(let i = 0 ; i <= N ; i++) {

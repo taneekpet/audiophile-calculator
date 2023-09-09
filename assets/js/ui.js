@@ -18,8 +18,10 @@ function isNumberUI(event) {
 
 function Fill() {
   let correctChance =  document.querySelector('input#correctChance').value;
+  let randomChance =  document.querySelector('input#randomChance').value;
   let N = document.querySelector('input#numberOfTrial').value;
   correctChance = parseFloat(correctChance);
+  randomChance = parseFloat(randomChance)
   N = parseInt(N);
 
   if(correctChance < 0 || correctChance > 1) {
@@ -34,7 +36,7 @@ function Fill() {
     mainTable.removeChild(mainTable.lastElementChild)
   }
 
-  [lucky, unlucky, maxIndex] = calculate(correctChance,N)
+  [lucky, unlucky, maxIndex] = calculate(correctChance,randomChance,N)
   for(let i = 0; i < N ; i++) {
     const newRow = document.createElement('tbody');
     const newTr = document.createElement('tr');
